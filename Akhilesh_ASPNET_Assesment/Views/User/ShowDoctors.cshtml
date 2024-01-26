@@ -1,0 +1,62 @@
+﻿@model List<DoctorDetails>
+@{
+    ViewData["Title"] = "ShowDoctors";
+    Layout = "_UserLayout";
+}
+
+<h2 class="special">All Doctors</h2>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+@if (Model == null)
+{
+    <h3>No Doctors to display</h3>
+}
+else
+{
+
+    var Fields = Model.Select(f => f.Field).Distinct().ToList();
+
+    <strong>Select the Field</strong>
+    <select id="inputField">
+        <option value="all">All</option>
+        @foreach (var f in Fields)
+        {
+            <option value="@f">@f</option>
+        }
+    </select>
+
+    <div class="card-container">
+
+
+        @foreach (var doc in Model)
+        {
+            <div class="doc-card doctors">
+                <div>
+                    <p class="special"><strong>Name : </strong> @doc.Name</p>
+                    <p class="special"><strong>Phone Number : </strong> @doc.PhoneNumber</p>
+                    <p class="special"><strong>Field : </strong> <span class="DisplayedField">@doc.Field</span></p>
+                    <p class="special"><strong>Availibitlity Status : </strong> @doc.Status</p>
+                    <p class="special"><strong>Slots per Day : </strong> @doc.Slots</p>
+                    <p class="special"><strong>Timings : </strong> @doc.Start_time - @doc.End_time</p>
+                    <p class="special"><strong>Fees : </strong> @doc.Fees </p>
+                    @if (doc.Status == "Not Available")
+                    {
+                        <button class="btn" disabled>
+                            Book slot
+                        </button>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Book", new { id = doc.Id })" class="btn">
+                            Book slot
+                        </a>
+                    }
+                </div>
+                <img width="200px" src="~/images/Medical prescription-bro.svg" alt="pic" />
+            </div>
+            <script src="~/js/User/ShowDoctors.js"></script>
+        }
+    </div>
+}
+

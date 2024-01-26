@@ -1,0 +1,32 @@
+﻿@model List<DoctorDetails>
+@{
+    ViewData["Title"] = "ShowBooked";
+    Layout = "_UserLayout";
+}
+
+<h2>All Booked Slots</h2>
+
+@if (Model == null)
+{
+    <h3>No Slots to display</h3>
+}
+else
+{
+    <div class="card-container">
+        @foreach (var doc in Model)
+        {
+            <div class="doc-card">
+                <div>
+                    <p class="special"><strong>Name : </strong> @doc.Name</p>
+                    <p class="special"><strong>Phone Number : </strong> @doc.PhoneNumber</p>
+                    <p class="special"><strong>Field : </strong> @doc.Field</p>
+                    <p class="special"><strong>Fees : </strong> @doc.Fees </p>
+                    <p class="special"><strong>Appointment Date : </strong> @doc.Appointment_date </p>
+                    <p class="special"><strong>Appointment Timings : </strong> <br />@doc.App_Start_time - @doc.App_End_time </p>
+                </div>
+                <img width="200px" src="~/images/Doctor-bro.svg" alt="pic" />
+            </div>
+        }
+    </div>
+}
+

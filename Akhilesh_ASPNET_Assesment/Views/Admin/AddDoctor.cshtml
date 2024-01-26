@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_AdminLayout";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<div class="form-container" style="margin: 0">
+    <div class="main">
+        <h2>Add a doctor</h2>
+        <form class="form-horizontal" id="registrationForm" method="post" role="form">
+            <!-- Name -->
+            <input type="text" class="form-control" id="inputName" placeholder="Enter your name" pattern="[a-zA-Z. ]*" required> <br />
+
+            <!-- Phone Number -->
+            <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Enter your phone number" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit phone number starting from 6 to 9" required> <br />
+
+            <!-- Password -->
+            <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" required> <br />
+
+            <!-- Field -->
+            <input type="text" class="form-control" id="inputField" placeholder="Enter your area of expertise" pattern="[a-zA-Z]+" required> <br />
+
+
+            <!-- Availibility Satus-->
+            <label for="status">Availability Status:</label>
+            <select class="form-control" id="status" name="status" required>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+            </select> <br />
+
+            <div style="display: flex; justify-content: space-between;">
+                <div style="width: 180px;">
+                    <!-- Start time -->
+                    <label for="startTime">Start Time:</label>
+                    <input type="time" class="form-control" id="startTime" required onchange="updateEndTimeMin()" />
+                </div>
+
+                <div style="width: 180px;">
+                    <!-- End time -->
+                    <label for="startTime">End Time:</label>
+                    <input type="time" class="form-control" id="endTime" required onchange="updateStartTimeMax()"/>
+                </div>
+            </div> <br />
+
+            <!-- Slots -->
+            <input type="tel" class="form-control" id="inputSlots" placeholder="Enter your slots" pattern="[0-9]+" title="Please enter a valid positive number" required> <br />
+
+            <!-- Fees amount -->
+            <input type="text" class="form-control" id="inputFeesAmount" placeholder="Enter your fees" pattern="^[1-9]\d*$" title="Please enter a positive number" required> <br />
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Add the Doctor</button>
+        </form>
+    </div>
+    <img src="~/images/add_doc.svg" />
+</div>
+<script src="~/js/Admin/AddDoctor.js"></script>

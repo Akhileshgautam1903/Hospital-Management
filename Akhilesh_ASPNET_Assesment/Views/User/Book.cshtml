@@ -1,0 +1,27 @@
+﻿@model DoctorDetails
+@{
+    ViewData["Title"] = "Book";
+    Layout = "_UserLayout";
+}
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<div class="form-container">
+    <div>
+        <h2>Book Your Slot</h2>
+        <p class="special"><strong>Name : </strong> @Model.Name</p>
+        <p class="special"><strong>Phone Number : </strong> <span id="phNo">@Model.PhoneNumber</span></p>
+        <p class="special"><strong>Field : </strong> @Model.Field</p>
+        <p class="special"><strong>Fees : </strong> @Model.Fees</p>
+
+        <form method="post" id="form">
+            <label for="status">Choose the date:</label>
+            <input type="date" id="inputDate" required /> <br />
+
+            <button type="submit" class="btn">Book Slot</button>
+        </form>
+    </div>
+    <img src="~/images/book_doc.svg" alt="book" />
+</div>
+<script src="~/js/User/Book.js"></script>

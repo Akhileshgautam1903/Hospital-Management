@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_UserLayout";
+}
+
+<div class="hero">
+    <div class="row">
+        <!-- Left Content -->
+        <div class="col-md-6 content">
+            <h1>
+                Welcome to <span class="special">User Portal</span>
+            </h1>
+            <h3>
+                Discover the Easiest Way to Book Your <br /> <span class="special">Appointments Seamlessly</span>
+            </h3>
+            <h4>Why Choose <strong class="special">Our User Portal?</strong></h4>
+            <ul>
+                <li>Personalized Dashboard</li>
+                <li>Appointment Booking</li>
+                <li>Prescription Refill</li>
+                <li>Health Records Access</li>
+            </ul>
+            <h3>
+                You can do following operation : <br /> <br />
+                <a asp-area="" asp-controller="User" asp-action="ShowDoctors" class="btn">Book Slot</a>
+                <a asp-area="" asp-controller="User" asp-action="CancelAppointment" class="btn">Cancel Slot</a>
+                <a asp-area="" asp-controller="User" asp-action="UpdateWallet" class="btn">Update wallet</a>
+            </h3>
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-md-6 hero-img">
+            <img src="~/images/user_index_page.svg" class="img-responsive" alt="Image">
+        </div>
+    </div>
+</div>

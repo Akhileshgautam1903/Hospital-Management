@@ -1,0 +1,20 @@
+﻿@model UserDetails
+@{
+    ViewData["Title"] = "MyDetails";
+    Layout = "_UserLayout";
+}
+
+<div class="parent">
+    <div class="card">
+        <div class="content">
+            <h2 class="special">My Details</h2>
+            <div class="details">
+                <p><strong>Name : </strong> @Model.Name</p>
+                <p><strong>Phone Number : </strong>@Model.PhoneNumber</p>
+                <p><strong>Password : </strong>@Model.Password</p>
+                <p><strong>Wallet : </strong>@Model.Wallet</p>
+            </div>
+        </div>
+        <img width="300" src="~/images/Editing body text-pana.svg" />
+    </div>
+</div>

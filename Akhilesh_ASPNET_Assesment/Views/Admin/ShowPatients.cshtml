@@ -1,0 +1,28 @@
+﻿@model List<UserDetails>
+@{
+    ViewData["Title"] = "ShowPatients";
+    Layout = "_AdminLayout";
+}
+
+<h2 class="special">All Patients</h2>
+
+@if (Model == null)
+{
+    <h3>No Doctors to display</h3>
+}
+else
+{
+    <div class="card-container">
+        @foreach (var user in Model)
+        {
+            <div class="doc-card">
+                <div>
+                    <p class="special"><strong>Name : </strong> @user.Name</p>
+                    <p class="special"><strong>Phone Number : </strong> @user.PhoneNumber</p>
+                </div>
+                <img width="100px" src="~/images/Editing body text-bro.svg" alt="pic" />
+            </div>
+        }
+    </div>
+}
+

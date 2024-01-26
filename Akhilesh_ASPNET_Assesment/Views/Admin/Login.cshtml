@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<div class="form-container">
+    <div class="main">
+        <h2>Admin Login</h2> <br />
+        <form class="form-horizontal" id="form" method="post" role="form">
+            <!-- Phone Number -->
+            <input type="text" class="form-control" id="inputNumber" pattern="^\d{10}$" placeholder="Enter your phone number" required> <br />
+
+            <!-- Password -->
+            <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" required> <br />
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+    <img src="~/images/Admin-bro.svg" alt="Admin pic"/>
+</div>
+<script src="~/js/Admin/Login.js"></script>

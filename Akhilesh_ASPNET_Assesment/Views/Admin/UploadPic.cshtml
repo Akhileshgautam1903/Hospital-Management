@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "UploadPic";
+}
+
+<h2>UploadPic</h2>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<div class="form-container">
+    <div class="main">
+        <h2>Upload Pic</h2> <br />
+        <form class="form-horizontal" id="form" method="post" role="form">
+            @*<!-- Phone Number -->
+                <input type="text" class="form-control" id="inputId" pattern="^\d{4}$" placeholder="Enter your id" required> <br />
+
+                <!-- Password -->
+                <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" required> <br />*@
+
+            <input type="text" class="form-control" id="inputName" placeholder="Enter image name" required> <br />
+
+            <input type="file" class="form-control" accept="image/*" id="inputPic" required /> <br />
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Upload</button>
+        </form>
+    </div>
+</div>
+<script src="~/js/Admin/uploadPic.js"></script>

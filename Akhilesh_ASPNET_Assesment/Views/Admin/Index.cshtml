@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
+}
+
+<div class="hero">
+    <div class="row">
+        <!-- Left Content -->
+        <div class="col-md-6 content">
+            <h1>
+                Welcome to <span class="special">Admin Portal</span>
+            </h1>
+            <h3>
+                Discover the Easiest Way to Book Your <br /> <span class="special">Manage Slots booking</span>
+            </h3>
+            <h4>Why Choose <strong class="special">Our Admin Portal?</strong></h4>
+            <ul>
+                <li>Comprehensive Dashboard</li>
+                <li>User-Friendly Interface</li>
+                <li>Appointment Management</li>
+                <li>Staff Administration</li>
+            </ul>
+            <h3>
+                You can do following operation : <br /> <br />
+                <a asp-area="" asp-controller="Admin" asp-action="AddDoctor" class="btn">Add Doctor</a>
+                <a asp-area="" asp-controller="Admin" asp-action="UpdateDoctors" class="btn">Update Doctors</a>
+                <a asp-area="" asp-controller="Admin" asp-action="DeleteDoctor" class="btn">Delete Doctor</a>
+            </h3>
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-md-6 hero-img">
+            <img src="~/images/doc_index.svg" class="img-responsive" alt="Image">
+        </div>
+    </div>
+</div>

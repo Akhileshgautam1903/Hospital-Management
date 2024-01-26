@@ -1,0 +1,34 @@
+﻿@model IEnumerable<DoctorDetails>
+@{
+    ViewData["Title"] = "DeleteDoctor";
+    Layout = "_AdminLayout";
+}
+
+<h2 class="special">All Doctors</h2>
+
+
+@if (Model == null)
+{
+    <h3>No Doctors to display</h3>
+}
+else
+{
+    <div class="card-container">
+        @foreach (var doc in Model)
+        {
+            <div class="doc-card">
+                <div>
+                    <p class="special"><strong>Name : </strong> @doc.Name</p>
+                    <p class="special"><strong>Phone Number : </strong> @doc.PhoneNumber</p>
+                    <p class="special"><strong>Field : </strong> @doc.Field</p>
+                    <p class="special"><strong>Availibitlity Status : </strong> @doc.Status</p>
+                    <p class="special"><strong>Slots : </strong> @doc.Slots</p>
+                    <p class="special"><strong>Fees : </strong> @doc.Fees </p>
+                    <button class="btn" onclick="deleteDoc(@doc.Id)"><i class="fa-solid fa-trash"></i>Delete</button>
+                </div>
+                <img width="200px" src="~/images/Doctor-bro.svg" alt="pic" />
+            </div>
+            <script src="~/js/Admin/DeleteDoc.js"></script>
+        }
+    </div>
+}

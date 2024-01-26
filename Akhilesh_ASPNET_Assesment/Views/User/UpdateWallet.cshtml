@@ -1,0 +1,23 @@
+﻿@model UserDetails
+@{
+    ViewData["Title"] = "UpdateWallet";
+    Layout = "_UserLayout";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<div class="form-container">
+    <div class="main">
+        <h2>Update Wallet</h2>
+        <form class="form-horizontal" method="post" id="form" role="form">
+            <h4>You have currently <strong class="special">@Model.Wallet</strong></h4>
+            <!-- Wallet Amount -->
+            <input type="text" class="form-control" id="inputWalletAmount" placeholder="Enter your wallet amount" pattern="^[1-9]\d*$" title="Please enter a positive number" required> <br />
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <img src="~/images/Credit card-bro.svg" alt="wallet img" />
+</div>
+<script src="~/js/User/UpdateWallet.js"></script>

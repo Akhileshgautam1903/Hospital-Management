@@ -1,0 +1,152 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap');
+
+:root {
+    --primary-color: #294B29;
+    --background-color: #DBE7C9;
+    --button-color: #789461;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+i {
+    margin-right: 5px;
+}
+
+nav{
+    background-color: var(--primary-color);
+}
+
+nav a{
+    color: white;
+}
+
+.nav  li  a:hover, .nav  li  a:focus {
+    text-decoration: none;
+    background-color: var(--primary-color);
+}
+
+.nav li ul a:focus {
+    text-decoration: none;
+    background-color: var(--primary-color);
+}
+
+nav a:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /*max-width: 500px;*/
+    margin: 60px auto;
+    padding: 30px;
+    padding-top: 0;
+    /*border: 1px solid #6C63FF;
+    box-shadow: 0 0 80px #6C63FF;
+    border-radius: 0 20px 0;*/
+}
+
+.form-container img {
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+}
+
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    /*color: var(--primary-color);*/
+}
+
+.btn {
+    background-color: var(--button-color);
+    color: white;
+    transition: all ease-in-out 0.3s;
+    outline: none;
+    border:none;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.msg{
+    margin: 8px 0;
+}
+
+.msg a {
+    color: var(--primary-color);
+}
+
+.msg a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.special {
+    color: var(--primary-color);
+}
+
+.hero-img {
+    padding-top: 40px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.doc-card{
+    border: 1px solid var(--primary-color);
+    padding: 10px 16px;
+    border-radius: 15px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 15px 0;
+    transition: all 0.3s;
+}
+
+.doc-card:hover {
+    box-shadow: 0 0 50px var(--primary-color);
+}
+
+
+/*To display user his details*/
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.card {
+    display: flex;
+    padding: 14px 32px;
+    border-radius: 20px;
+    width: 60vw;
+    justify-content: space-around;
+    align-items: center
+}

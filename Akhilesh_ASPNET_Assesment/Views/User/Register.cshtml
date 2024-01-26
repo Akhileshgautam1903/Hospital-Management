@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<div class="form-container">
+    <div class="main">
+        <h2>User Register</h2> <br />
+        <form class="form-horizontal" id="registrationForm" method="post" role="form">
+            <!-- Name -->
+            <input type="text" class="form-control" id="inputName" placeholder="Enter your name" required> <br />
+
+            <!-- Phone Number -->
+            <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Enter your phone number" pattern="[6-9][0-9]{9}" title="Please enter a valid 10-digit phone number starting from 6 to 9" required> <br />
+
+            <!-- Password -->
+            <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" required> <br />
+
+            <!-- Wallet amount -->
+            <input type="text" class="form-control" id="inputWalletAmount" placeholder="Enter your wallet amount" pattern="^[1-9]\d*$" title="Please enter a positive number" required> <br />
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+    <img style="margin-top:50px" src="~/images/Sign up-cuate.svg" />
+</div>
+<script src="~/js/User/Register.js"></script>
